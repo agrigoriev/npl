@@ -1,5 +1,7 @@
 #!/bin/bash
-source activate python2
-cd ~/npl/tasks/lab01s/
-tail -n 10000 ~/npl/bigdata/advert.log | ./mapper.py | sort | ./reducer.py > result
-echo "Done!"
+hadoop jar /usr/hdp/2.5.3.0-37/hadoop-mapreduce/hadoop-streaming.jar \
+  -D mapred.reduce.tasks=1 \
+  -input /users/adverts \
+  -output /users/adverts/result \
+  -mapper "mapper.py" \
+  -reducer "reducer.py"
