@@ -11,4 +11,3 @@ def do_map(record):
 for line in sys.stdin:
     for key, value in do_map(line):
         print '%s\t%s' % (key,value)
-        

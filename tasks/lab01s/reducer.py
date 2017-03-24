@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-#reducer.py
+# -*- coding: utf-8 -*-
+
 import sys
 
 def do_reduce(key, values):
