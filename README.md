@@ -1,2 +1,6 @@
 # npl
-newprolab tasks explained :)
+
+#lab01s
+
+test.sh - test script
+job.sh - cluster job
