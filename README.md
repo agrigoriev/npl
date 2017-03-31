@@ -1,6 +1,7 @@
-# npl
+#npl labs
 
-#lab01s
+for all labs:
 
 test.sh - test script
+
 job.sh - cluster job
