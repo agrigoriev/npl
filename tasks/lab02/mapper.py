@@ -7,7 +7,7 @@ import happybase
 
 #trying to connect to Hbase and create table if it doesn't exist
 try:
-    connection = happybase.Connection('localhost')
+    connection = happybase.Connection('node2.newprolab.com')
     connection.open()
     if "alexey.grigoriev" not in connection.tables():
         table = connection.create_table('alexey.grigoriev', {'data': dict(max_versions=4096)})
@@ -37,3 +37,4 @@ def do_map(line):
 
 for line in sys.stdin:
     do_map(line)
+
