@@ -33,6 +33,8 @@ def do_map(record):
     if len(data) < 3:
         return
     user = data[0].strip()
+    if not user:
+	return
     domain = url2domain(data[2].strip())
     for gid,group in domain_groups.iteritems():
         if domain in group:
